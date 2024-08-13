@@ -11,6 +11,14 @@
         <?php
         // ここにコードを書いていく
         $nums = [15, 4, 18, 23, 10 ];
+        sort($nums);
+        echo "昇順ソート: " . implode(", ", $nums) . "<br>";
+        rsort($nums);
+        echo "降順ソート: " . implode(", ", $nums) . "<br>"; 
+        ?>
+        <!-- <?php
+        // ここにコードを書いていく
+        $nums = [15, 4, 18, 23, 10 ];
         
         // 昇順ソートの関数
         function bubbleSortAscending(&$array) {
@@ -45,7 +53,7 @@
         }
         bubbleSortAscending($nums);
         bubbleSortDescending($nums);
-        ?>
+        ?> -->
     </p>
 </body>
 
