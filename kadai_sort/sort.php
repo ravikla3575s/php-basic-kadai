@@ -11,10 +11,16 @@
         <?php
         // ここにコードを書いていく
         $nums = [15, 4, 18, 23, 10 ];
-        sort($nums);
-        echo '昇順ソート: ' . implode(', ', $nums) . '<br>';
-        rsort($nums);
-        echo '降順ソート: ' . implode(', ', $nums) . '<br>'; 
+        function sortAscending(&$array) {
+        sort($array);
+        echo "昇順ソート: " . implode(", ", $array) . "<br>";
+        }
+        function sortDescending(&$array) {
+        rsort($array);
+        echo "降順ソート: " . implode(", ", $array) . "<br>"; 
+        }
+        sortAscending($nums);
+        sortDescending($nums);
         ?>
         <!-- <?php
         // ここにコードを書いていく
@@ -33,7 +39,7 @@
                     }
                 }
             }
-            echo '昇順ソート: ' . implode(', ', $array) . '<br>';
+            echo "昇順ソート: " . implode(", ", $array) . "<br>";
         }
         
         // 降順ソートの関数
@@ -49,7 +55,7 @@
                     }
                 }
             }
-            echo '降順ソート: ' . implode(', ', $array) . '<br>';  
+            echo "降順ソート: " . implode(", ", $array) . "<br>";  
         }
         bubbleSortAscending($nums);
         bubbleSortDescending($nums);
