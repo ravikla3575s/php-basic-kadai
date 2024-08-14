@@ -24,8 +24,8 @@ class Animal {
         $this->weight = $weight;
     }
 
-    public function show_weight() {
-        echo $this->weight . '<br>';
+    public function show_height() {
+        echo $this->height . '<br>';
     }
 }
 
@@ -38,5 +38,5 @@ print_r($dog);
 echo '<br>';
 
 $potato->show_price();
-$dog->show_weight();
+$dog->show_height();
 ?>
