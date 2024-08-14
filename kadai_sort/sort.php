@@ -11,17 +11,22 @@
         <?php
         // ここにコードを書いていく
         $nums = [15, 4, 18, 23, 10 ];
-        function sortAscending(&$array) {
+        function sort_2way(&$array, $order){
+        if($order === true){
+        echo '昇順にソートします。<br>';
         sort($array);
-        echo "昇順ソート: " . implode(", ", $array) . "<br>";
-        }
-        function sortDescending(&$array) {
+        }elseif($order === false){
+        echo '降順にソートします。<br>';
         rsort($array);
-        echo "降順ソート: " . implode(", ", $array) . "<br>"; 
         }
-        sortAscending($nums);
-        sortDescending($nums);
+        foreach($array as $value){
+        echo $value . "<br>"; 
+        }
+        }
+        sort_2way($nums, true);
+        sort_2way($nums, false);
         ?>
+
         <!-- <?php
         // ここにコードを書いていく
         $nums = [15, 4, 18, 23, 10 ];
